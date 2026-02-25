@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>P&P · black glass · sharp contact</title>
+  <title>P&P · black glass · square theme</title>
   <!-- Inter font + icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,7 @@
     .spot {
       position: absolute;
       background: rgba(255, 255, 255, 0.12);
-      border-radius: 50%;
+      border-radius: 0; /* SQUARE SPOTS — sharp edges */
       filter: blur(45px);
       box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
       animation: floatGlow 18s infinite alternate ease-in-out;
@@ -80,7 +80,7 @@
       scroll-snap-stop: always;
     }
 
-    /* --- navigation (floating) --- */
+    /* --- navigation (floating, SQUARE) --- */
     nav {
       display: flex;
       justify-content: space-between;
@@ -91,7 +91,7 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 4rem;
+      border-radius: 0; /* SQUARE */
       box-shadow: 0 25px 45px -20px black, 0 0 0 0.5px rgba(255,255,255,0.05);
       position: sticky;
       top: 1.2rem;
@@ -132,7 +132,7 @@
       text-shadow: 0 0 12px #ffffff;
     }
 
-    /* --- buttons (float + white glow) --- */
+    /* --- buttons (float + white glow, SQUARE) --- */
     .btn {
       background: rgba(0, 0, 0, 0.75);
       backdrop-filter: blur(18px);
@@ -140,7 +140,7 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       color: white;
       padding: 1rem 2.8rem;
-      border-radius: 4rem;
+      border-radius: 0; /* SQUARE */
       font-size: 1.15rem;
       font-weight: 500;
       cursor: pointer;
@@ -186,7 +186,7 @@
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.12);
       padding: 1.3rem 2.5rem;
-      border-radius: 5rem;
+      border-radius: 0; /* SQUARE */
       font-size: 1.2rem;
       color: #f0f0f0;
       box-shadow: 0 25px 35px -20px black, 0 0 30px rgba(255,255,255,0.03);
@@ -197,7 +197,7 @@
       max-width: 1000px;
       max-height: 400px;
       object-fit: cover;
-      border-radius: 3.5rem;
+      border-radius: 0; /* SQUARE */
       margin-top: 2.5rem;
       box-shadow: 0 40px 60px -30px black, 0 0 0 1px rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.1);
@@ -209,7 +209,7 @@
       transform: scale(1.01);
     }
 
-    /* --- sections --- */
+    /* --- sections (SQUARE) --- */
     section {
       max-width: 1300px;
       margin: 2.5rem auto;
@@ -218,7 +218,7 @@
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 5rem;
+      border-radius: 0; /* SQUARE */
       box-shadow: 0 25px 45px -25px black, 0 0 30px rgba(255,255,255,0.02);
     }
 
@@ -249,7 +249,7 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 3.5rem;
+      border-radius: 0; /* SQUARE */
       padding: 2.4rem 2rem;
       transition: all 0.3s cubic-bezier(0.17, 0.75, 0.3, 1.2);
       box-shadow: 0 30px 45px -25px black, 0 0 20px rgba(255,255,255,0.02);
@@ -284,7 +284,7 @@
       text-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
 
-    /* about card */
+    /* about card (SQUARE) */
     .about-card {
       max-width: 950px;
       margin: 0 auto;
@@ -295,16 +295,16 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 5rem;
+      border-radius: 0; /* SQUARE */
       box-shadow: 0 30px 50px -25px black, 0 0 30px rgba(255,255,255,0.03);
     }
 
-    /* --- CONTACT SECTION — FIXED: straight lines, nested boxes, no curvy curves inside --- */
+    /* --- CONTACT — SQUARE, nested boxes --- */
     .contact-section {
       text-align: center;
     }
 
-    /* outer contact container — rectangular, sharp, glass */
+    /* outer contact container — square, glass */
     .contact-outer {
       max-width: 700px;
       margin: 0 auto;
@@ -312,7 +312,7 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 2rem;  /* only outer slight rounding, but rectangular inside */
+      border-radius: 0; /* SQUARE */
       padding: 2.5rem;
       box-shadow: 0 30px 50px -25px black, 0 0 30px rgba(255,255,255,0.05);
     }
@@ -323,7 +323,7 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0.5rem;  /* minimal, almost straight — set to 0 for absolute square */
+      border-radius: 0; /* SQUARE */
       padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
@@ -332,22 +332,12 @@
       box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
     }
 
-    /* for absolute straight inner corners, use 0. if you want very slight micro curve, keep 0.2rem max */
-    .contact-inner {
-      border-radius: 0;  /* completely rectangular box inside */
-    }
-
-    /* optional: keep outer with 1.5rem, inner zero — crisp nested look */
-    .contact-outer {
-      border-radius: 1.8rem;
-    }
-
     .contact-inner i {
       font-size: 3.2rem;
       color: #ffffff;
       background: rgba(255,255,255,0.05);
       padding: 1.2rem;
-      border-radius: 0;  /* sharp icon background */
+      border-radius: 0; /* sharp icon background */
       border: 1px solid rgba(255,255,255,0.15);
       box-shadow: 0 0 30px rgba(255,255,255,0.1);
     }
@@ -387,13 +377,13 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 0;  /* sharp rectangular */
+      border-radius: 0; /* SQUARE */
       padding: 0.8rem 2.5rem;
       display: inline-block;
       color: #cccccc;
     }
 
-    /* --- footer --- */
+    /* --- footer (SQUARE) --- */
     footer {
       text-align: center;
       padding: 3rem;
@@ -407,7 +397,7 @@
     @media (max-width: 750px) {
       nav { margin: 1rem 1.2rem; padding: 0.7rem 1.8rem; }
       .nav-links { display: none; }
-      section { padding: 2.5rem 1.5rem; border-radius: 3rem; }
+      section { padding: 2.5rem 1.5rem; }
       .about-card { font-size: 1.1rem; padding: 2rem; }
       .contact-outer { padding: 1.5rem; }
       .contact-inner { padding: 1.5rem; }
@@ -415,7 +405,7 @@
   </style>
 </head>
 <body>
-  <!-- random white glow spots (floating, subtle) -->
+  <!-- random white glow spots (floating, subtle) — now with SQUARE shapes -->
   <div class="glow-spots">
     <div class="spot"></div>
     <div class="spot"></div>
@@ -428,7 +418,7 @@
   </div>
 
   <div class="smooth-container">
-    <!-- floating nav -->
+    <!-- floating nav (square) -->
     <nav>
       <span class="logo"><i class="fas fa-cube"></i> P&P Global Ventures</span>
       <div class="nav-links">
@@ -439,7 +429,7 @@
       </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO (square elements) -->
     <header>
       <h1>Scalable · Digital<br>Infrastructure</h1>
       <div class="hero-sub">
@@ -450,7 +440,7 @@
       <img class="hero-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format" alt="floating glass core" loading="lazy">
     </header>
 
-    <!-- about -->
+    <!-- about (square) -->
     <section>
       <h2><i class="fas fa-bolt"></i> About Us</h2>
       <div class="about-card">
@@ -459,7 +449,7 @@
       </div>
     </section>
 
-    <!-- what we do -->
+    <!-- what we do (square cards) -->
     <section>
       <h2><i class="fas fa-cogs"></i> What We Do</h2>
       <div class="card-grid">
@@ -472,7 +462,7 @@
       </div>
     </section>
 
-    <!-- process -->
+    <!-- process (square) -->
     <section>
       <h2><i class="fas fa-diagram-project"></i> Our Process</h2>
       <div class="card-grid">
@@ -483,7 +473,7 @@
       </div>
     </section>
 
-    <!-- mission & vision -->
+    <!-- mission & vision (square) -->
     <section>
       <h2><i class="fas fa-bullseye"></i> Mission & Vision</h2>
       <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
@@ -492,7 +482,7 @@
       </div>
     </section>
 
-    <!-- CONTACT — FIXED: straight lines, nested box in box, no inner curves -->
+    <!-- CONTACT — square, nested boxes -->
     <section class="contact-section">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
       <div class="contact-outer">
@@ -510,7 +500,7 @@
     </section>
 
     <footer>
-      <i class="fas fa-copyright"></i> 2026 P&P Global Ventures — <span style="color:#dddddd;">black glass · white glow · sharp contact</span>
+      <i class="fas fa-copyright"></i> 2026 P&P Global Ventures — <span style="color:#dddddd;">black glass · square · precise</span>
       <div style="margin-top: 1.5rem; font-size: 1.8rem; word-spacing: 1.5rem; color: #aaaaaa;">
         <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-x-twitter"></i>
       </div>
