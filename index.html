@@ -1,510 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>P&P · black glass · square theme</title>
-  <!-- Inter font + icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* --- pure black foundation --- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P&P Global Ventures</title>
 
-    body {
-      background: #000000;
-      font-family: "Inter", system-ui, -apple-system, sans-serif;
-      color: #ffffff;
-      line-height: 1.5;
-      font-weight: 350;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    /* --- random white glow spots (floating, subtle) --- */
-    .glow-spots {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
-    .spot {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 0; /* SQUARE SPOTS — sharp edges */
-      filter: blur(45px);
-      box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
-      animation: floatGlow 18s infinite alternate ease-in-out;
-    }
+body{
+    background:#000;
+    color:#fff;
+}
 
-    /* random spots — different sizes, positions, delays */
-    .spot:nth-child(1) { width: 40vmax; height: 40vmax; top: 5%; left: -5%; animation-duration: 22s; background: rgba(255,255,255,0.08); filter: blur(60px); }
-    .spot:nth-child(2) { width: 30vmin; height: 30vmin; bottom: 10%; right: 2%; animation-duration: 19s; animation-delay: -3s; background: rgba(255,255,255,0.1); filter: blur(50px); }
-    .spot:nth-child(3) { width: 55vmin; height: 55vmin; top: 30%; right: 15%; animation-duration: 27s; animation-delay: -7s; background: rgba(255,255,255,0.06); filter: blur(80px); }
-    .spot:nth-child(4) { width: 25vmax; height: 25vmax; bottom: 20%; left: 20%; animation-duration: 24s; animation-delay: -2s; background: rgba(255,255,255,0.09); filter: blur(55px); }
-    .spot:nth-child(5) { width: 45vmin; height: 45vmin; top: 70%; left: 5%; animation-duration: 21s; background: rgba(255,255,255,0.07); filter: blur(65px); }
-    .spot:nth-child(6) { width: 35vmax; height: 35vmax; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-duration: 30s; background: rgba(255,255,255,0.05); filter: blur(90px); }
-    .spot:nth-child(7) { width: 20vmin; height: 20vmin; top: 15%; right: 25%; animation-duration: 17s; background: rgba(255,255,255,0.15); filter: blur(40px); }
-    .spot:nth-child(8) { width: 60vmin; height: 60vmin; bottom: 5%; left: 40%; animation-duration: 26s; background: rgba(255,255,255,0.04); filter: blur(70px); }
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position:sticky;
+    top:0;
+    background:#000;
+}
 
-    @keyframes floatGlow {
-      0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-      33% { transform: translate(3%, -4%) scale(1.1); opacity: 0.5; }
-      66% { transform: translate(-4%, 5%) scale(0.95); opacity: 0.3; }
-      100% { transform: translate(4%, 2%) scale(1.05); opacity: 0.4; }
-    }
+nav a{
+    color:#aaa;
+    margin-left:20px;
+    text-decoration:none;
+}
 
-    /* --- smooth container (above spots) --- */
-    .smooth-container {
-      scroll-snap-type: y proximity;
-      overflow-y: auto;
-      height: 100vh;
-      scroll-padding-top: 2rem;
-      position: relative;
-      z-index: 5;
-    }
+nav a:hover{color:#fff;}
 
-    section {
-      scroll-snap-align: start;
-      scroll-snap-stop: always;
-    }
+/* HERO */
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
 
-    /* --- navigation (floating, SQUARE) --- */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 2.5rem;
-      margin: 1.5rem 3rem 0 3rem;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0; /* SQUARE */
-      box-shadow: 0 25px 45px -20px black, 0 0 0 0.5px rgba(255,255,255,0.05);
-      position: sticky;
-      top: 1.2rem;
-      z-index: 100;
-    }
+.hero h1{
+    font-size:58px;
+    font-weight:800;
+    margin-bottom:20px;
+    text-shadow:0 0 40px rgba(255,255,255,0.2);
+}
 
-    .logo {
-      font-size: 1.7rem;
-      font-weight: 600;
-      background: linear-gradient(135deg, #ffffff, #d0d0d0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.02em;
-    }
-    .logo i {
-      color: #ffffffcc;
-      margin-right: 8px;
-      filter: drop-shadow(0 0 8px #ffffff60);
-    }
+.hero p{
+    color:#aaa;
+    margin-bottom:30px;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 2.8rem;
-    }
-    .nav-links a {
-      color: #eeeeee;
-      text-decoration: none;
-      font-weight: 450;
-      font-size: 1.05rem;
-      transition: 0.2s;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 4px;
-    }
-    .nav-links a:hover {
-      color: white;
-      border-bottom-color: #ffffffcc;
-      text-shadow: 0 0 12px #ffffff;
-    }
+.hero img{
+    width:80%;
+    border-radius:20px;
+    margin-top:40px;
+    box-shadow:0 0 40px rgba(255,255,255,0.1);
+}
 
-    /* --- buttons (float + white glow, SQUARE) --- */
-    .btn {
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: white;
-      padding: 1rem 2.8rem;
-      border-radius: 0; /* SQUARE */
-      font-size: 1.15rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2);
-      box-shadow: 0 25px 35px -20px black, 0 0 20px rgba(255,255,255,0.05);
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      transform: translateY(0);
-    }
-    .btn i { font-size: 1.2rem; color: #ffffffcc; }
-    .btn:hover {
-      background: rgba(15, 15, 15, 0.8);
-      border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 30px 45px -20px black, 0 0 0 1px rgba(255,255,255,0.25), 0 0 40px rgba(255,255,255,0.3);
-      transform: translateY(-5px) scale(1.02);
-    }
+/* SECTION */
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
 
-    /* --- hero --- */
-    header {
-      text-align: center;
-      padding: 4rem 2rem 6rem 2rem;
-    }
+.section h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
 
-    h1 {
-      font-size: clamp(3.2rem, 12vw, 6rem);
-      font-weight: 650;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #ffffff, #f0f0f0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      filter: drop-shadow(0 8px 15px #000000);
-      letter-spacing: -0.02em;
-      text-shadow: 0 0 30px rgba(255,255,255,0.15);
-    }
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
 
-    .hero-sub {
-      max-width: 750px;
-      margin: 1.8rem auto 2.2rem auto;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 1.3rem 2.5rem;
-      border-radius: 0; /* SQUARE */
-      font-size: 1.2rem;
-      color: #f0f0f0;
-      box-shadow: 0 25px 35px -20px black, 0 0 30px rgba(255,255,255,0.03);
-    }
+/* CARD */
+.card{
+    background:#0a0a0a;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.3s;
+}
 
-    .hero-img {
-      width: 85%;
-      max-width: 1000px;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 0; /* SQUARE */
-      margin-top: 2.5rem;
-      box-shadow: 0 40px 60px -30px black, 0 0 0 1px rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: 0.4s ease;
-      background: #0a0a0a;
-    }
-    .hero-img:hover {
-      box-shadow: 0 50px 80px -30px black, 0 0 0 1px rgba(255,255,255,0.25), 0 0 60px rgba(255,255,255,0.2);
-      transform: scale(1.01);
-    }
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,255,255,0.1);
+}
 
-    /* --- sections (SQUARE) --- */
-    section {
-      max-width: 1300px;
-      margin: 2.5rem auto;
-      padding: 4rem 2.5rem;
-      background: rgba(0, 0, 0, 0.55);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 0; /* SQUARE */
-      box-shadow: 0 25px 45px -25px black, 0 0 30px rgba(255,255,255,0.02);
-    }
+.card h3{
+    font-size:18px;
+    margin-bottom:12px;
+    font-weight:700;
+}
 
-    h2 {
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      font-weight: 600;
-      background: linear-gradient(145deg, #ffffff, #dddddd);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      display: inline-block;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 0.3rem;
-      margin-bottom: 2.5rem;
-      filter: drop-shadow(0 4px 6px black);
-      text-shadow: 0 0 15px rgba(255,255,255,0.2);
-    }
+.card p{
+    font-size:14px;
+    color:#cfcfcf;
+    line-height:1.7;
+}
 
-    /* --- card grid --- */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.2rem;
-    }
+/* IMAGE BREAK */
+.image-break img{
+    width:100%;
+    max-height:320px;
+    object-fit:cover;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+}
 
-    .card {
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 0; /* SQUARE */
-      padding: 2.4rem 2rem;
-      transition: all 0.3s cubic-bezier(0.17, 0.75, 0.3, 1.2);
-      box-shadow: 0 30px 45px -25px black, 0 0 20px rgba(255,255,255,0.02);
-      color: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      transform: translateY(0);
-    }
+/* CONTACT */
+.contact{
+    text-align:center;
+}
 
-    .card:hover {
-      transform: translateY(-12px) scale(1.02);
-      border-color: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 40px 60px -25px black, 0 0 0 1px rgba(255,255,255,0.2), 0 0 50px rgba(255,255,255,0.25);
-      background: rgba(15, 15, 15, 0.75);
-    }
+.contact-box{
+    border:1px solid rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:15px;
+    display:inline-block;
+}
 
-    .card i {
-      font-size: 2.6rem;
-      color: #ffffffdd;
-      margin-bottom: 1.2rem;
-      filter: drop-shadow(0 0 15px #ffffff80);
-    }
-    .card b {
-      font-size: 1.8rem;
-      font-weight: 550;
-      line-height: 1.3;
-      background: linear-gradient(145deg, #ffffff, #f0f0f0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 10px rgba(255,255,255,0.2);
-    }
-
-    /* about card (SQUARE) */
-    .about-card {
-      max-width: 950px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 1.35rem;
-      padding: 3rem 3.5rem;
-      background: rgba(0, 0, 0, 0.65);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0; /* SQUARE */
-      box-shadow: 0 30px 50px -25px black, 0 0 30px rgba(255,255,255,0.03);
-    }
-
-    /* --- CONTACT — SQUARE, nested boxes --- */
-    .contact-section {
-      text-align: center;
-    }
-
-    /* outer contact container — square, glass */
-    .contact-outer {
-      max-width: 700px;
-      margin: 0 auto;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 0; /* SQUARE */
-      padding: 2.5rem;
-      box-shadow: 0 30px 50px -25px black, 0 0 30px rgba(255,255,255,0.05);
-    }
-
-    /* inner box — completely straight corners, nested */
-    .contact-inner {
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0; /* SQUARE */
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.2rem;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
-    }
-
-    .contact-inner i {
-      font-size: 3.2rem;
-      color: #ffffff;
-      background: rgba(255,255,255,0.05);
-      padding: 1.2rem;
-      border-radius: 0; /* sharp icon background */
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 0 30px rgba(255,255,255,0.1);
-    }
-
-    .contact-name {
-      font-size: 2.2rem;
-      font-weight: 600;
-      background: linear-gradient(135deg, #ffffff, #cccccc);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-size: 1.2rem;
-      color: #dddddd;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding-bottom: 0.5rem;
-      width: 100%;
-      justify-content: center;
-    }
-    .contact-detail i {
-      font-size: 1.2rem;
-      background: transparent;
-      padding: 0;
-      border: none;
-      box-shadow: none;
-      color: #ffffffcc;
-    }
-
-    .contact-footer-note {
-      margin-top: 2rem;
-      background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 0; /* SQUARE */
-      padding: 0.8rem 2.5rem;
-      display: inline-block;
-      color: #cccccc;
-    }
-
-    /* --- footer (SQUARE) --- */
-    footer {
-      text-align: center;
-      padding: 3rem;
-      color: #cccccc;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      background: #000000;
-      font-size: 1.1rem;
-    }
-
-    /* responsive */
-    @media (max-width: 750px) {
-      nav { margin: 1rem 1.2rem; padding: 0.7rem 1.8rem; }
-      .nav-links { display: none; }
-      section { padding: 2.5rem 1.5rem; }
-      .about-card { font-size: 1.1rem; padding: 2rem; }
-      .contact-outer { padding: 1.5rem; }
-      .contact-inner { padding: 1.5rem; }
-    }
-  </style>
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+</style>
 </head>
+
 <body>
-  <!-- random white glow spots (floating, subtle) — now with SQUARE shapes -->
-  <div class="glow-spots">
-    <div class="spot"></div>
-    <div class="spot"></div>
-    <div class="spot"></div>
-    <div class="spot"></div>
-    <div class="spot"></div>
-    <div class="spot"></div>
-    <div class="spot"></div>
-    <div class="spot"></div>
-  </div>
 
-  <div class="smooth-container">
-    <!-- floating nav (square) -->
-    <nav>
-      <span class="logo"><i class="fas fa-cube"></i> P&P Global Ventures</span>
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Systems</a>
-        <a href="#">Process</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
+<nav>
+<div><b>P&P Global Ventures</b></div>
+<div>
+<a href="#">Home</a>
+<a href="#">Systems</a>
+<a href="#">Process</a>
+<a href="#">Contact</a>
+</div>
+</nav>
 
-    <!-- HERO (square elements) -->
-    <header>
-      <h1>Scalable · Digital<br>Infrastructure</h1>
-      <div class="hero-sub">
-        <i class="fas fa-bolt"></i> automation · multi‑platform · high‑frequency
-      </div>
-      <button class="btn"><i class="fas fa-paper-plane"></i> Initiate contact <i class="fas fa-arrow-right"></i></button>
-      <br>
-      <img class="hero-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format" alt="floating glass core" loading="lazy">
-    </header>
+<!-- HERO -->
+<div class="hero">
+<h1>Scalable Digital Infrastructure</h1>
+<p>automation · multi-platform · high-frequency execution</p>
 
-    <!-- about (square) -->
-    <section>
-      <h2><i class="fas fa-bolt"></i> About Us</h2>
-      <div class="about-card">
-        <i class="fas fa-cubes" style="font-size: 3.2rem;"></i>
-        <p><strong>P&P Global Ventures</strong> designs digital‑first systems that replace manual effort with structured, automated workflows. We enable high‑volume output across platforms — with operational stability, consistency, and long‑term growth embedded in every layer.</p>
-      </div>
-    </section>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+</div>
 
-    <!-- what we do (square cards) -->
-    <section>
-      <h2><i class="fas fa-cogs"></i> What We Do</h2>
-      <div class="card-grid">
-        <div class="card"><i class="fas fa-share-alt"></i><b>Content Distribution</b><div class="text">Structured pipelines that publish large media volumes across platforms. Stable, friction‑reduced.</div></div>
-        <div class="card"><i class="fas fa-robot"></i><b>Automation Infrastructure</b><div class="text">Multi‑layer automation for minimal intervention — devices, accounts, timing orchestrated.</div></div>
-        <div class="card"><i class="fas fa-chart-line"></i><b>Multi‑Platform Scaling</b><div class="text">Simultaneous distribution, adapted per platform. Scale reach while keeping core consistent.</div></div>
-        <div class="card"><i class="fas fa-magnifying-glass-chart"></i><b>Growth Optimization</b><div class="text">Continuous performance analysis to refine systems, lift quality, and amplify results.</div></div>
-        <div class="card"><i class="fas fa-layer-group"></i><b>Digital Asset Building</b><div class="text">Long‑term assets that compound through consistent, strategic execution — sustainable value.</div></div>
-        <div class="card"><i class="fas fa-clock"></i><b>High‑Frequency Publishing</b><div class="text">Quality, volume & consistency — systems handle massive frequency without degradation.</div></div>
-      </div>
-    </section>
+<!-- ABOUT -->
+<div class="section">
+<h2>About Us</h2>
 
-    <!-- process (square) -->
-    <section>
-      <h2><i class="fas fa-diagram-project"></i> Our Process</h2>
-      <div class="card-grid">
-        <div class="card"><i class="fas fa-sitemap"></i><b>1. Structure Systems</b><div class="text">Blueprints that eliminate complexity, define efficient operations.</div></div>
-        <div class="card"><i class="fas fa-cubes"></i><b>2. Deploy Infrastructure</b><div class="text">Roll out devices, workflows, systems ready for scaling.</div></div>
-        <div class="card"><i class="fas fa-gauge-high"></i><b>3. Optimize Performance</b><div class="text">Data‑driven refinements to sharpen every part.</div></div>
-        <div class="card"><i class="fas fa-expand"></i><b>4. Scale Operations</b><div class="text">Expand volume while keeping full consistency and control.</div></div>
-      </div>
-    </section>
+<div class="card">
+<p>
+<strong>P&P Global Ventures</strong> is a digital-first venture focused on building scalable systems that eliminate dependency on manual execution. We design structured workflows that enable consistent, high-volume output across platforms while maintaining operational stability, efficiency, and long-term growth through disciplined system-driven execution strategies.
+</p>
+</div>
+</div>
 
-    <!-- mission & vision (square) -->
-    <section>
-      <h2><i class="fas fa-bullseye"></i> Mission & Vision</h2>
-      <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-        <div class="card"><i class="fas fa-flag"></i><b>Mission</b><div class="text">Build scalable digital systems that deliver predictable results by eliminating inefficiencies through structured workflows.</div></div>
-        <div class="card"><i class="fas fa-eye"></i><b>Vision</b><div class="text">Become a leading force in automated digital ecosystems — efficient, scalable, built for long‑term growth.</div></div>
-      </div>
-    </section>
+<!-- IMAGE BREAK -->
+<div class="section image-break">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b">
+</div>
 
-    <!-- CONTACT — square, nested boxes -->
-    <section class="contact-section">
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <div class="contact-outer">
-        <div class="contact-inner">
-          <i class="fas fa-user-astronaut"></i>
-          <span class="contact-name">Ayush Bhardwaj</span>
-          <div class="contact-detail"><i class="fas fa-envelope"></i> ayvshbhardwaj@gmail.com</div>
-          <div class="contact-detail"><i class="fas fa-phone-alt"></i> +91 9939945419</div>
-          <div class="contact-detail"><i class="fas fa-map-pin"></i> Sant Nagar · Bari Eghu · Begusarai, Bihar</div>
-        </div>
-      </div>
-      <div class="contact-footer-note">
-        <i class="fas fa-bolt"></i> reactive infrastructure · 24/7 automated
-      </div>
-    </section>
+<!-- WHAT WE DO -->
+<div class="section">
+<h2>What We Do</h2>
 
-    <footer>
-      <i class="fas fa-copyright"></i> 2026 P&P Global Ventures<span style="color:#dddddd;"></span>
-      <div style="margin-top: 1.5rem; font-size: 1.8rem; word-spacing: 1.5rem; color: #aaaaaa;">
-        <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-x-twitter"></i>
-      </div>
-    </footer>
-  </div>
+<div class="grid">
+
+<div class="card">
+<h3>Content Distribution Systems</h3>
+<p>
+We design structured content pipelines that enable high-volume publishing across multiple platforms without manual bottlenecks. Our systems ensure stability, efficiency, and consistent delivery, allowing operations to scale seamlessly while maintaining quality and platform-specific adaptability.
+</p>
+</div>
+
+<div class="card">
+<h3>Automation Infrastructure</h3>
+<p>
+Our infrastructure replaces repetitive manual effort with coordinated workflows that manage devices, accounts, and execution cycles. These systems operate continuously, enabling scalable operations with precision, synchronization, and long-term reliability.
+</p>
+</div>
+
+<div class="card">
+<h3>Multi-Platform Scaling</h3>
+<p>
+We develop systems that allow simultaneous scaling across platforms while adapting to platform-specific behavior. This ensures optimized reach, controlled execution, and consistent growth across all digital channels.
+</p>
+</div>
+
+<div class="card">
+<h3>Growth Optimization</h3>
+<p>
+Through continuous analysis and refinement, we optimize workflows to improve efficiency and output quality. Our approach focuses on eliminating inefficiencies and maximizing performance through structured improvements.
+</p>
+</div>
+
+<div class="card">
+<h3>Digital Asset Building</h3>
+<p>
+We focus on creating long-term digital assets that generate consistent value over time. These assets grow through structured execution and strategic scaling, delivering sustainable and compounding results.
+</p>
+</div>
+
+<div class="card">
+<h3>High-Frequency Publishing</h3>
+<p>
+Our systems support high-frequency publishing while maintaining performance and stability. This ensures reliable output even under large-scale and continuous execution environments.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- PROCESS -->
+<div class="section">
+<h2>Our Process</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>1. Structure Systems</h3>
+<p>
+We design efficient system architectures that define workflows clearly and eliminate unnecessary complexity, ensuring scalable and stable operations.
+</p>
+</div>
+
+<div class="card">
+<h3>2. Deploy Infrastructure</h3>
+<p>
+We implement the required infrastructure including devices and workflows, enabling operations to function at scale with precision and reliability.
+</p>
+</div>
+
+<div class="card">
+<h3>3. Optimize Performance</h3>
+<p>
+Continuous monitoring and refinement improve system efficiency, ensuring better output and long-term operational stability.
+</p>
+</div>
+
+<div class="card">
+<h3>4. Scale Operations</h3>
+<p>
+Once optimized, systems are scaled to handle larger volumes while maintaining consistency and control across all processes.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section contact">
+<h2>Contact</h2>
+
+<div class="contact-box">
+<p><b>Ayush Bhardwaj</b></p>
+<p>ayvshbhardwaj@gmail.com</p>
+<p>+91 9939945419</p>
+<p>Begusarai, Bihar</p>
+</div>
+</div>
+
+<footer>
+© 2026 P&P Global Ventures
+</footer>
+
 </body>
 </html>
