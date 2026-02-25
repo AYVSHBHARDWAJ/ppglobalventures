@@ -6,119 +6,100 @@
 <title>P&P Global Ventures</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
 
 body {
-  background: #0b0f19;
-  color: #e5e7eb;
+  background:#0b0f19;
+  color:#e5e7eb;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:rgba(15,23,42,0.9);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
 }
-
-nav h2 {
-  color: #60a5fa;
-}
+nav h2 { color:#60a5fa; }
 
 /* HERO */
 header {
-  text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  text-align:center;
+  padding:120px 20px;
+  background:linear-gradient(135deg,#1e3a8a,#0f172a);
 }
-
-header h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-header p {
-  max-width: 700px;
-  margin: auto;
-  opacity: 0.85;
-}
+header h1 { font-size:50px; margin-bottom:20px; }
+header p { max-width:750px; margin:auto; opacity:0.85; }
 
 .btn {
-  margin-top: 25px;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+  margin-top:25px;
+  padding:14px 28px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+.btn:hover { box-shadow:0 0 20px #2563eb; }
+
+.hero-img {
+  width:100%;
+  max-height:400px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-top:40px;
 }
 
-.btn:hover {
-  box-shadow: 0 0 20px #2563eb;
-}
-
-/* SECTION */
+/* SECTIONS */
 section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
 }
 
 h2 {
-  color: #60a5fa;
-  margin-bottom: 20px;
-  text-align: center;
+  color:#60a5fa;
+  margin-bottom:30px;
+  text-align:center;
 }
 
 /* CARDS */
 .grid {
-  display: grid;
-  gap: 25px;
+  display:grid;
+  gap:25px;
 }
-
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 }
 
 .card {
-  background: #111827;
-  padding: 25px;
-  border-radius: 16px;
-  transition: 0.3s;
-  border: 1px solid transparent;
+  background:#111827;
+  padding:25px;
+  border-radius:16px;
+  transition:0.3s;
+  border:1px solid transparent;
 }
-
 .card:hover {
-  transform: translateY(-8px);
-  border: 1px solid #2563eb;
-  box-shadow: 0 0 20px rgba(37,99,235,0.4);
+  transform:translateY(-8px);
+  border:1px solid #2563eb;
+  box-shadow:0 0 25px rgba(37,99,235,0.5);
 }
 
-/* IMAGE */
-.hero-img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin-top: 40px;
+.card b {
+  font-size:18px;
+  color:#93c5fd;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 40px;
-  background: #0f172a;
-  opacity: 0.6;
+  text-align:center;
+  padding:40px;
+  background:#0f172a;
+  opacity:0.6;
 }
 </style>
 </head>
@@ -131,47 +112,96 @@ footer {
 
 <header>
   <h1>Building Scalable Digital Systems</h1>
-  <p>We create infrastructure that enables high-volume content distribution, automation, and efficient digital operations at scale.</p>
-  <button class="btn">Get in Touch</button>
-
+  <p>We design and operate high-performance digital infrastructure that enables content distribution, automation, and scalable operations across multiple platforms with consistency and efficiency.</p>
+  <button class="btn">Contact Us</button>
   <img class="hero-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 </header>
 
 <section>
 <h2>About Us</h2>
 <div class="card">
-P&P Global Ventures is a digital-first venture focused on building scalable systems that operate with consistency and efficiency. 
-We specialize in managing content distribution workflows and multi-device operations that enable high-volume output without dependency on manual processes.
+P&P Global Ventures is a digital-first venture focused on building scalable systems that operate with consistency and efficiency. Our approach is centered around replacing manual effort with structured workflows that allow high-volume output across multiple platforms while maintaining operational stability and long-term growth potential.
 </div>
 </section>
 
 <section>
 <h2>What We Do</h2>
 <div class="grid grid-3">
-  <div class="card">Content Distribution Systems</div>
-  <div class="card">Automation Infrastructure</div>
-  <div class="card">Multi-Platform Scaling</div>
-  <div class="card">Growth Optimization</div>
-  <div class="card">Digital Asset Building</div>
-  <div class="card">High-Frequency Publishing</div>
+
+<div class="card">
+<b>Content Distribution Systems</b><br><br>
+We design structured content pipelines that enable large volumes of media to be published consistently across platforms. Our systems focus on maintaining stability, reducing friction, and ensuring that content reaches target audiences efficiently without reliance on inconsistent manual processes.
+</div>
+
+<div class="card">
+<b>Automation Infrastructure</b><br><br>
+Our infrastructure integrates automation across multiple layers, allowing operations to run with minimal human intervention. This enables us to manage complex workflows involving multiple devices and accounts while maintaining timing accuracy and consistent execution.
+</div>
+
+<div class="card">
+<b>Multi-Platform Scaling</b><br><br>
+We operate systems that distribute content across multiple platforms simultaneously, maximizing reach and efficiency. By adapting strategies to each platform, we are able to scale operations while maintaining consistency across all channels.
+</div>
+
+<div class="card">
+<b>Growth Optimization</b><br><br>
+We continuously analyze performance data to refine systems and improve efficiency. This ensures that operations not only scale but also improve in quality and effectiveness over time.
+</div>
+
+<div class="card">
+<b>Digital Asset Building</b><br><br>
+We focus on building long-term digital assets that grow over time through consistent output and strategic execution, creating sustainable value rather than short-term results.
+</div>
+
+<div class="card">
+<b>High-Frequency Publishing</b><br><br>
+Our systems support high-frequency content publishing while maintaining quality and consistency, enabling large-scale operations without compromising performance.
+</div>
+
 </div>
 </section>
 
 <section>
 <h2>Our Process</h2>
 <div class="grid grid-3">
-  <div class="card">Structure Systems</div>
-  <div class="card">Deploy Infrastructure</div>
-  <div class="card">Optimize Performance</div>
-  <div class="card">Scale Operations</div>
+
+<div class="card">
+<b>Structure Systems</b><br><br>
+We begin by designing a clear system structure that defines how operations will function efficiently without unnecessary complexity.
+</div>
+
+<div class="card">
+<b>Deploy Infrastructure</b><br><br>
+We deploy the required infrastructure including devices, workflows, and systems to support scalable operations.
+</div>
+
+<div class="card">
+<b>Optimize Performance</b><br><br>
+We continuously refine systems by analyzing performance and improving efficiency across all processes.
+</div>
+
+<div class="card">
+<b>Scale Operations</b><br><br>
+Once stable, we scale operations to handle larger volumes while maintaining consistency and control.
+</div>
+
 </div>
 </section>
 
 <section>
 <h2>Mission & Vision</h2>
 <div class="grid grid-3">
-  <div class="card"><b>Mission:</b><br>Build scalable digital systems that deliver consistent growth.</div>
-  <div class="card"><b>Vision:</b><br>Become a leader in automated digital ecosystems globally.</div>
+
+<div class="card">
+<b>Mission</b><br><br>
+Our mission is to build scalable digital systems that deliver consistent and predictable results by eliminating inefficiencies through structured workflows.
+</div>
+
+<div class="card">
+<b>Vision</b><br><br>
+Our vision is to become a leading force in automated digital ecosystems by building systems that are efficient, scalable, and capable of long-term growth.
+</div>
+
 </div>
 </section>
 
