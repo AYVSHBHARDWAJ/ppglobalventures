@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PNP Global Ventures</title>
+  <title>P&P Global Ventures</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0f19;
+      color: #e5e7eb;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
       background: #0f172a;
-      color: white;
-      line-height: 1.6;
+      position: sticky;
+      top: 0;
+    }
+
+    nav h2 {
+      margin: 0;
+      color: #60a5fa;
     }
 
     header {
       padding: 100px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #2563eb, #1e293b);
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
     }
 
     header h1 {
-      font-size: 42px;
-      margin: 0;
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
     header p {
       max-width: 700px;
-      margin: 15px auto;
-      opacity: 0.85;
+      margin: auto;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #2563eb;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
     }
 
     section {
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
-      padding: 60px 20px;
     }
 
     h2 {
@@ -51,20 +74,23 @@
     }
 
     .card {
-      background: #1e293b;
+      background: #111827;
       padding: 20px;
       border-radius: 12px;
     }
 
-    .cta {
-      text-align: center;
-      padding: 80px 20px;
-      background: #1e293b;
+    img.hero {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-top: 30px;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 40px;
+      background: #0f172a;
       opacity: 0.6;
     }
   </style>
@@ -72,53 +98,59 @@
 
 <body>
 
+<nav>
+  <h2>P&P Global Ventures</h2>
+</nav>
+
 <header>
   <h1>Building Scalable Digital Systems</h1>
-  <p>PNP Global Ventures is a digital venture company focused on automation, content ecosystems, and scalable infrastructure.</p>
+  <p>We create high-performance digital infrastructure powered by automation, content systems, and scalable operations.</p>
+  <button class="btn">Contact Us</button>
+
+  <img class="hero" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 </header>
 
 <section>
-  <h2>Who We Are</h2>
-  <div class="card">
-    PNP Global Ventures is built around one core idea — scalable systems outperform manual effort.
-    We design and operate digital infrastructures that allow content and automation to work in sync.
-  </div>
+  <h2>About Us</h2>
+  <p>
+    P&P Global Ventures is a digital media and automation-driven company focused on scaling content distribution systems.
+    We operate infrastructure that allows high-volume output with minimal manual effort.
+  </p>
 </section>
 
 <section>
   <h2>What We Do</h2>
   <div class="grid grid-3">
-    <div class="card">Content Systems for high-volume growth</div>
-    <div class="card">Automation infrastructure across devices</div>
-    <div class="card">Multi-platform distribution</div>
-    <div class="card">Growth optimization systems</div>
-    <div class="card">Digital asset scaling</div>
+    <div class="card">Content Distribution Systems</div>
+    <div class="card">Automation Infrastructure</div>
+    <div class="card">Multi-Platform Scaling</div>
+    <div class="card">Growth Optimization</div>
+    <div class="card">Digital Asset Building</div>
+    <div class="card">High-Frequency Posting Systems</div>
   </div>
 </section>
 
 <section>
-  <h2>Why We Exist</h2>
-  <div class="card">
-    Most digital systems fail due to inconsistency and manual effort.
-    We build systems that run consistently, scale efficiently, and operate with minimal friction.
+  <h2>Our Process</h2>
+  <div class="grid grid-3">
+    <div class="card">Structure Systems</div>
+    <div class="card">Deploy Infrastructure</div>
+    <div class="card">Optimize Performance</div>
+    <div class="card">Scale Operations</div>
   </div>
 </section>
 
 <section>
   <h2>Mission & Vision</h2>
   <div class="grid grid-3">
-    <div class="card"><b>Mission:</b> Build scalable systems for consistent growth.</div>
-    <div class="card"><b>Vision:</b> Become a global leader in automated digital infrastructure.</div>
-  </div>
-</section>
-
-<section>
-  <h2>How We Work</h2>
-  <div class="grid grid-3">
-    <div class="card">1. Structure</div>
-    <div class="card">2. Build</div>
-    <div class="card">3. Optimize</div>
-    <div class="card">4. Scale</div>
+    <div class="card">
+      <b>Mission:</b><br>
+      Build scalable systems that generate consistent digital growth.
+    </div>
+    <div class="card">
+      <b>Vision:</b><br>
+      Become a leader in automated digital ecosystems globally.
+    </div>
   </div>
 </section>
 
@@ -131,13 +163,8 @@
   </div>
 </section>
 
-<section class="cta">
-  <h2>Ready to Build Something Scalable?</h2>
-  <p>Let’s create systems that work for you.</p>
-</section>
-
 <footer>
-  © 2026 PNP Global Ventures
+  © 2026 P&P Global Ventures
 </footer>
 
 </body>
